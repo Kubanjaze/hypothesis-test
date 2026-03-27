@@ -42,6 +42,22 @@ Outputs: hypothesis_results.csv, hypothesis_plot.png
 | benz vs pyr | 0.0191 | 1.68 | 7.21 vs 6.27 |
 | quin vs bzim | 0.0350 | 1.46 | 7.62 vs 6.88 |
 
+## Key Concepts
+- Kruskal-Wallis H-test — non-parametric global comparison across multiple groups
+- Mann-Whitney U test — pairwise non-parametric comparison
+- Welch t-test — pairwise parametric comparison (unequal variances)
+- Cohen's d effect size for quantifying practical significance
+
+## Verification Checklist
+- [x] Kruskal-Wallis p = 0.0014 (significant at alpha=0.05)
+- [x] 6 significant pairwise comparisons identified
+- [x] ind vs pyr has largest effect (d=3.62, p=0.0012)
+- [x] hypothesis_results.csv and hypothesis_plot.png saved to output/
+
+## Risks
+- Small group sizes (n=6-12 per family) limit statistical power and may miss real differences
+- Multiple pairwise comparisons without Bonferroni correction inflate family-wise error rate
+
 ## Key Insights
 - pyr is the weakest scaffold class — statistically significantly weaker than ALL other families
 - ind is the strongest — 100% hit rate and highest mean pIC50 (7.90)
